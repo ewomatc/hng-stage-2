@@ -10,13 +10,15 @@ The Person data contains only the person's name. The name fields are unique so t
    - URL endpoint: ```/api```
    - HTTP method: ```POST```
    - Request Body:
-     ```
+     
+     ```JSON
      {
 	      "name": "Ewoma"
      }
      ```
    - Response (on success):
-     ```
+     
+     ```JSON
      {
 	      "savedPerson": {
 		    "name": "Ewoma",
@@ -25,7 +27,8 @@ The Person data contains only the person's name. The name fields are unique so t
      }
      ```
    - Response (If the user with the provided name has been created already):
-     ```
+     
+     ```JSON
      {
         "error": "ConflictError",
 	      "message": "This person has already been created"
@@ -36,7 +39,8 @@ Person data can be retrieved by passing the unique id as well as the person's na
 - URL endpoint: ```/api/:id```
 - HTTP method: ```GET```
 - Response (on success):
-  ```
+  
+  ```JSON
   {
 	  "person": {
 		  "_id": "64ffefcd7234591bb3c955e9",
@@ -45,7 +49,8 @@ Person data can be retrieved by passing the unique id as well as the person's na
   }
   ```
 - Response (not found):
-  ```
+  
+  ```JSON
   {
 	  "error": "NotFoundError",
 	  "message": "Cannot find this person"
@@ -56,13 +61,15 @@ A person's data can be updated by passing in the person's id or name as a URL pa
 - URL endpoint: ```/api/:id```
 - HTTP method: ```PUT```
 - Request body:
-  ```
+  
+  ```JSON
   {
 	  "name": "Shinobi"
   }
   ```
 - Response (on success):
-  ```
+  
+  ```JSON
   {
 	  "updatedPerson": {
 		  "_id": "64ffefcd7234591bb3c955e9",
@@ -71,7 +78,8 @@ A person's data can be updated by passing in the person's id or name as a URL pa
   }
   ```
 - Response (if the id or name was not found)
-  ```
+  
+  ```JSON
   {
 	  "error": "NotFoundError",
 	  "message": "Person with this Id does not exist"
@@ -86,12 +94,14 @@ A Person's data can be deleted by passing in their ```id`` as a url parameter.
 - URL endpoint: ```/api/:id```
 - HTTP method: ```DELETE```
 - Response (on success):
-  ```
+  
+  ```JSON
   {}
   ```
   The ```DELETE``` operation will simply return an empty object and a status code of ```204``` ```No Content```.
 - Response (not found)
-  ```
+  
+  ```JSON
   {
 	  "error": "NotFoundError",
 	  "message": "This person is not registered"
