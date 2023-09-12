@@ -1,5 +1,9 @@
 # API Documentation
 This is my solution for Stage 2 of the HNG-X internship. The API allows you perform CRUD operations on a Person Resource.
+## UML Diagram
+This image shows the request and response flow of the API.
+![er-hng](https://github.com/ewomatc/hng-stage-2/assets/107651392/a77ccfd2-2477-477a-8f58-5556e3b2228c)
+
 ## Getting Started
 Refer to [this API's README](https://github.com/ewomatc/hng-stage-2/blob/main/README.md) for information on how to setup and use the API.
 ## API Endpoints
