@@ -9,21 +9,25 @@ The database storage schema is represented like so, the different operations tha
 ## Getting started
 Follow these steps to get started using the API
 1. Clone this repository:
-   ```
+   
+   ```bash
    $ git clone https://github.com/ewomatc/hng-stage-2.git
    ```
-3. Navigate to the project directory and install the required dependencies:
-   ```
+2. Navigate to the project directory and install the required dependencies:
+   
+   ```bash
    Desktop/ewomatc $ cd hng-stage-2
    Desktop/ewomatc/hng-stage-2 $ npm install
    ```
-4. Start the server like so:
-   ```
+3. Start the server like so:
+   
+   ```bash
    $ npm run dev
    ```
 The API is running locally on your machine and should return this response when you visit ```http://localhost:8080``` in your browser:
-```
+
+```JSON
 {
-"message": "Welcome to my API"
+   "message": "Welcome to my API"
 }
 ```
