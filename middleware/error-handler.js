@@ -27,6 +27,13 @@ const errorHandler = (err, req, res, next) => {
       message: err.message
     })
   }
+
+   if (err.name === 'MongooseError') {
+    return res.status(400).json({
+      error: 'Refresh your browser',
+      message: err.message
+    })
+  }
   if (err.code === 11000) {
     // MongoDB duplicate key error
     return res.status(409).json({
