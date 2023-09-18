@@ -30,7 +30,7 @@ const errorHandler = (err, req, res, next) => {
 
    if (err.name === 'MongooseError') {
     return res.status(400).json({
-      error: 'Refresh your browser',
+      error: 'cannot perform this operation, try again',
       message: err.message
     })
   }
